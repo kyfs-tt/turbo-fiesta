@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD -->
+<!DOCTYPE fs SYSTEM "file.dtd">
+
+<fs>
+  <file
+    inode="1000"
+    type="directory"
+    permissions="drwxrwxrwx"
+    hard-link-count="3"
+    owner="user"
+    owner-group="user"
+    size="0"
+    date-updated="2021-02-22T18:00:00"
+    name="folder-1"
+  >
+    <file inode="1001" type="directory" permissions="drwxrwxrwx" hard-link-count="2" owner="user" owner-group="user" size="0" date-updated="2021-02-22T18:00:00" name="folder-2">
+      <file inode="1002" type="file" permissions="-rw-r--r--" hard-link-count="1" owner="user" owner-group="user" size="4" date-updated="2021-02-22T18:00:00" name="file-1"></file>
+    </file>
+
+    <file inode="1003" type="file" permissions="-rw-r--r--" hard-link-count="5" owner="user" owner-group="user" size="10" date-updated="2021-02-22T18:00:00" name="file-2"></file>
+  </file>
+</fs>

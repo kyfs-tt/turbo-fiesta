@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- root element -->
+<expense-logger>
+  <user>
+    <name></name>
+    <monthly-cap></monthly-cap>
+  </user>
+
+  <expenses>
+    <!-- expense@group categorizes expenses. eg: 
+      expense on trip to the Mars -->
+    <expense group="">
+      <date></date>
+      <!-- possible values of item@type are meal, transport, ... -->
+      <item type=""></item>
+      <payment-method></payment-method>
+    </expense>
+  </expenses>
+</expense-logger>

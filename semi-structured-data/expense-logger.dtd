@@ -1,0 +1,15 @@
+<!-- DTD for expense-logger -->
+<!DOCTYPE expense-logger [
+
+<!ELEMENT expense-logger (user, expenses)>
+
+<!ELEMENT user (name, monthly-cap?)>
+
+<!ELEMENT name (PCDATA)>
+
+<!ELEMENT monthly-cap (CDATA)>
+
+<!ELEMENT expenses (expense)>
+<!-- TODO: expense, date, item, payment-method -->
+
+]>

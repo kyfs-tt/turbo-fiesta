@@ -1,0 +1,27 @@
+<!-- DTD for fs -->
+
+<!DOCTYPE fs [
+
+<!-- ELEMENT FORMAT: "ELEMENT element-name category | (element-content)" -->
+<!-- file system can have files or be empty -->
+<!ELEMENT fs (file*)>
+
+<!-- a directory can contain 0 or more files -->
+<!ELEMENT file (file*)>
+
+<!-- ATTLIST FORMAT: "ATTLIST element-name attribute-name attribute-type attribute-value" -->
+<!ATTLIST file inode CDATA #REQUIRED>
+
+<!-- This yields an error! Why? -->
+<!-- <!ATTLIST file inode ID #REQUIRED> -->
+
+<!ATTLIST file type (file|directory) "file">
+<!ATTLIST file permissions CDATA #REQUIRED>
+<!ATTLIST file hard-link-count CDATA "1">
+<!ATTLIST file owner CDATA #REQUIRED>
+<!ATTLIST file owner-group CDATA #REQUIRED>
+<!ATTLIST file size CDATA "0">
+<!ATTLIST file date-updated CDATA "1970-01-01T00:00:00">
+<!ATTLIST file name CDATA #REQUIRED>
+
+]>
