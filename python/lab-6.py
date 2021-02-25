@@ -82,7 +82,21 @@ try:
     change = np.subtract(trades2, trades1)
     print("Verifying...: ", change.sum(axis=0)[-1])
 
-    # TODO: 3. Print one of your arrays, say the change array...
+    # 3. Print one of your arrays, say the change array...
+    np.set_printoptions(formatter={'float': '{: 6.2f}'.format})
+    print("\n\n===")
+    print(change)
+    # reset formatting
+    np.set_printoptions()
+
+    # 4. Concatenate the table for 2017 to the end of the table for 2016,
+    # and call this new array combined_years
+    combined_years = np.vstack((trades1, trades2))
+
+    # 5. Save the new array combined_years to a text file, using
+    # %10.2f to format the prices and a comma (,) as a separator
+    # between columns
+    np.savetxt("AAPL-export.csv", combined_years, fmt="%10.2f", delimiter=",")
 
 except IOError as e:
     print("IOError: ", e.with_traceback())
